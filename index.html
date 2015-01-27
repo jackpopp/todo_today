@@ -1,0 +1,58 @@
+<!Doctype html>
+<html>
+	<head>
+		<script src="assets/js/knockout.3.2.0.min.js"></script>
+		<script src="assets/js/moment.js"></script>
+		<script src="assets/js/main.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="js-list-binding">
+
+				<div class="js-main-container">
+
+					<h1>
+						<span data-bind="text:hoursLeft"></span> hours
+						<span data-bind="text:minutesLeft"></span> minutes
+					</h1>
+
+					Completed: <span data-bind="text:itemsCompleted"></span> of <span data-bind="text:totalItems"></span>
+
+					<ul data-bind="foreach:items">
+						<li class="list-item">
+							<span class="col-7">
+								<span data-bind="text:title"></span>
+							</span>
+
+							<span class="col-3 button-area">
+								<span class="button" data-bind="click:$root.toggleEdit"><i class="fa fa-pencil"></i></span>
+								<span class="button" data-bind="click:$root.deleteItem"><i class="fa fa-trash-o"></i></span>
+
+								<span data-bind="ifnot:complete">
+									<span class="button" data-bind="click:$root.toggleComplete"><i class="fa fa-square-o"></i></span>
+								</span>
+								<span data-bind="if:complete">
+									<span class="button" data-bind="click:$root.toggleComplete"><i class="fa fa-check-square-o"></i></span>
+								</span>
+							</span>
+						</li>
+					</ul>
+
+				</div>
+
+				<div class="input-area">
+					<form data-bind="event: { submit: function(){ addItem(newItemTitle()) } }">
+						<input data-bind="value:newItemTitle">
+					</form>
+
+					<form data-bind="if:showEditScreen, event: { submit: function(){ updateEditItem() } }">
+						<input data-bind="value:editItemTitle">
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
