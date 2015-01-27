@@ -14,15 +14,17 @@
 
 				<div class="js-main-container">
 
-					<h1>
-						<span data-bind="text:hoursLeft"></span> hours
-						<span data-bind="text:minutesLeft"></span> minutes
-					</h1>
+					<div class="js-info">
+						<h1>
+							<span data-bind="text:hoursLeft"></span> hours
+							<span data-bind="text:minutesLeft"></span> minutes
+						</h1>
 
-					Completed: <span data-bind="text:itemsCompleted"></span> of <span data-bind="text:totalItems"></span>
+						Completed: <span data-bind="text:itemsCompleted"></span> of <span data-bind="text:totalItems"></span>
+					</div>
 
-					<ul data-bind="foreach:items">
-						<li class="list-item">
+					<ul class="list js-list" data-bind="foreach:items">
+						<li class="list--item">
 							<span class="col-7">
 								<span data-bind="text:title"></span>
 							</span>

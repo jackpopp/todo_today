@@ -189,7 +189,6 @@ List.prototype = {
 
 	resetData: function()
 	{
-		console.log('here')
 		// reset the data here and set the new enddate
 		localStorage.setItem(this.key, JSON.stringify({list: [], endDate: this.getEndDate()}));
 	},
@@ -205,6 +204,9 @@ function setHeight()
 {
 	height = (window.innerHeight - 100) > 220 ? window.innerHeight - 100 : 220
 	document.querySelectorAll('.js-main-container')[0].style.height = height+"px"
+
+	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
+	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
 }
 
 window.onload = function()
