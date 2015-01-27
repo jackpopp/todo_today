@@ -206,7 +206,7 @@ function setHeight()
 	document.querySelectorAll('.js-main-container')[0].style.height = height+"px"
 
 	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
-	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
+	document.querySelectorAll('.js-list')[0].style.height = (height)+"px"
 }
 
 window.onload = function()
