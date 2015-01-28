@@ -209,7 +209,7 @@ function setHeight()
 	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
 	inputHeight = document.querySelectorAll('.js-inputs')[0].offsetHeight
 
-	infoHeight = infoHeight - inputHeight
+	infoHeight = infoHeight + inputHeight
 
 	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
 }
