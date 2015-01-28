@@ -93,6 +93,11 @@ ul li {
 	transition: all 0.5s;
 }
 
+.list--item:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
 .list--item.complete {
 	background: rgb(215, 229, 202);
 }
