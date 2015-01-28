@@ -213,7 +213,7 @@ function setHeight()
 	// need to remove the amount of padding thats on the cotinaer also
 
 	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
-	document.querySelectorAll('.js-list')[0].style.paddingBottom = window.getComputedStyle(document.querySelectorAll('.js-container')[0], null).getPropertyValue('padding')
+	document.querySelectorAll('.js-list')[0].style.paddingBottom = (parseInt(window.getComputedStyle(document.querySelectorAll('.js-container')[0], null).getPropertyValue('padding'))*2)+'px'
 }
 
 window.onload = function()
