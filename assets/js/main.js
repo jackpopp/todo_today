@@ -202,11 +202,15 @@ List.prototype = {
 
 function setHeight()
 {
-	height = (window.innerHeight - 100) > 220 ? window.innerHeight - 100 : 220
+	height = (window.innerHeight - 100) > 220 ? window.innerHeight : 220
 	document.querySelectorAll('.js-main-container')[0].style.height = height+"px"
 
 	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
-	document.querySelectorAll('.js-list')[0].style.height = (height)+"px"
+	inputHeight = document.querySelectorAll('.js-inputs')[0].offsetHeight
+
+	infoHeight = infoHeight - inputHeight
+
+	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
 }
 
 window.onload = function()
