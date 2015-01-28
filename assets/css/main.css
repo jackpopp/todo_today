@@ -37,6 +37,7 @@ body {
 
 .container {
 	padding: 10px;
+	overflow: none;
 }
 
 .left {
@@ -113,4 +114,8 @@ input {
 
 .button-area {
 	text-align: right;
+}
+
+.main-container {
+	overflow: none;
 }

@@ -204,6 +204,7 @@ function setHeight()
 {
 	height = (window.innerHeight - 100) > 220 ? window.innerHeight : 220
 	document.querySelectorAll('.js-main-container')[0].style.height = height+"px"
+	document.querySelectorAll('.js-container')[0].style.height = height+"px"
 
 	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
 	inputHeight = document.querySelectorAll('.js-inputs')[0].offsetHeight
