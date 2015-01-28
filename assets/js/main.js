@@ -209,9 +209,11 @@ function setHeight()
 	infoHeight = document.querySelectorAll('.js-info')[0].offsetHeight
 	inputHeight = document.querySelectorAll('.js-inputs')[0].offsetHeight
 
-	infoHeight = infoHeight + inputHeight
+	infoHeight = (infoHeight + inputHeight) 
+	// need to remove the amount of padding thats on the cotinaer also
 
 	document.querySelectorAll('.js-list')[0].style.height = (height - infoHeight)+"px"
+	document.querySelectorAll('.js-list')[0].style.paddingBottom = window.getComputedStyle(document.querySelectorAll('.js-container')[0], null).getPropertyValue('padding')
 }
 
 window.onload = function()
@@ -223,5 +225,6 @@ window.onload = function()
 	}
 
 }
+
 
 // set list height to fit in between top and bottom size and scroll
